@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //fn which take as argument as function and return as function known as higher order function
+      //   function x() {
+      //     console.log("Nameste ");
+      //   }
+      //   function y(x) {
+      //     return x();
+      //   }
+
+      //calculate area
+      const radius = [3, 2, 4, 1];
+      const circleArea = function () {
+        let i = 0;
+        const output = [];
+        while (i < radius.length) {
+          output.push(Math.PI * radius[i] * radius[i]);
+        }
+        return output;
+      };
+      console.log(circleArea());
+
+      //
+      const radius1 = [3, 5, 6, 7];
+      const area = function (radius) {
+        return Math.PI * radius * radius;
+      };
+      const calculate = function (radius, logic) {
+        const output1 = [];
+        for (let i = 0; i < radius.length; i++) {
+          output1.push(logic(radius));
+        }
+      };
+      calculate(radius1, area);
+    </script>
+  </body>
+</html>

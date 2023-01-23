@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Generator</title>
+  </head>
+  <body>
+    <script>
+      function numberGenerator() {
+        var num = 1;
+        function y() {
+          return true;
+        }
+        function checkNumber(y) {
+          console.log(num);
+          return y;
+        }
+        num++;
+        return checkNumber;
+      }
+      var number = numberGenerator();
+      number();
+    </script>
+  </body>
+</html>

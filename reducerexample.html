@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>Reducer example</title>
+  </head>
+  <body>
+    <script>
+      const users = [
+        { firstName: "xyz", lastName: "uvw", age: 24 },
+        { firstName: "rty", lastName: "fgh", age: 56 },
+        { firstName: "cvbb", lastName: "fgd", age: 87 },
+        { firstName: "4534", lastName: "cbvv", age: 56 },
+      ];
+      //filter
+      //   const filterVal = users
+      //     .filter((x) => {
+      //       if (x.age > 50) {
+      //         console.log(x);
+      //         return x;
+      //       }
+      //     })
+      //     .map((x) => {
+      //       return x.firstName;
+      //     });
+      //   console.log(filterVal);
+
+      const reducoutput = users.reduce((acc, curr) => {
+        console.log(curr);
+        console.log(acc);
+        if (curr.age > 50) {
+          acc.push(curr.firstName);
+        }
+      }, []);
+      console.log(reducoutput);
+
+      //reducer
+      //   const reducVal = users.reduce((acc, curr) => {
+      //     console.log(acc);
+      //     console.log(curr);
+      //     console.log(curr.age);
+      //     console.log(acc[curr.age]);
+      //     console.log(acc[curr.firstName] + "" + acc[curr.lastName]);
+      //     if (acc[curr.age]) {
+      //       acc[curr.age] = ++acc[curr.age];
+      //     } else {
+      //       acc[curr.age] = 1;
+      //     }
+      //     console.log(acc);
+      //     return acc;
+      //   }, {});
+      //   console.log(reducVal);
+      //   console.log(users);
+    </script>
+  </body>
+</html>

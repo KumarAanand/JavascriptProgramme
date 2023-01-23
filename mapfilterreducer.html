@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //map
+      const arr = [4, 5, 6, 7, 8];
+      let double = (x) => x * 2;
+      var newarr = arr.map(double);
+      console.log(arr);
+      console.log(newarr);
+
+      //filter the odd value
+      function isOdd(x) {
+        // if(x%2==0){
+        //     return x;
+        // }
+        console.log(x % 2);
+        return x % 2;
+      }
+      const output = arr.filter(() => false);
+      console.log(output);
+
+      //reducer
+      const arrredu = [32, 6, 7, 8, 9];
+      function findMax(arrredu) {
+        let max = 0;
+        for (let i = 0; i < arrredu.length; i++) {
+          if (arrredu[i] > max) {
+            max = arrredu[i];
+          }
+        }
+        return max;
+      }
+
+      console.log(findMax(arrredu));
+
+      //samelogic with reducer
+      const redarr = [45, 65, 87, 98];
+      const reduceroutput = redarr.reduce(function (acc, curr) {
+        if (curr > acc) {
+          acc = curr;
+        }
+        return acc;
+      }, 0);
+      console.log(reduceroutput);
+    </script>
+  </body>
+</html>

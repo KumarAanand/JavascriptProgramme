@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <body>
+    <h1>Hello javascript</h1>
+    <!-- <script src="hoisting.js"></script> -->
+    <script>
+      // var a = 100;
+      // const b = 100;
+      // let c = 100;
+      // {
+      //   var a = 10;
+      //   let b = 20;
+      //   const c = 30;
+      //   console.log(a);
+      //   console.log(b);
+      //   console.log(c);
+      // }
+      // console.log(a);
+      // console.log(b);
+      // console.log(c);
+
+      function x() {
+        var a = 7;
+        function y() {
+          console.log(a);
+        }
+        return y;
+      }
+      var z = x();
+      console.log(z);
+      z();
+    </script>
+  </body>
+</html>

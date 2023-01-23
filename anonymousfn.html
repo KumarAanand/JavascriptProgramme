@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function</title>
+  </head>
+  <body>
+    <script>
+      //  functional statment  --> defining the function name with function keyword known as function statement
+      function a() {
+        console.log("functional statment");
+      }
+
+      //function expression --> assiging a function into variable is known as function expression
+
+      var fn = function display() {
+        console.log("function expression statment");
+      };
+
+      a();
+      b();
+
+      //Anonymous function -->function witout name called a anonymous function
+
+      //    function (){
+
+      //    }
+      //usablity --> where function used as value can be used as
+
+      //named function
+      var namedfun = function namefn() {
+        console.log("name function  ");
+      };
+
+      // parameter and argument diffrence
+
+      // --> parameter
+      function displayMsg(param1, param2) {
+        //logic using the param1, param2
+      }
+      //argument is when you call the function that time you call the pass to funtion
+      displayMsg("name", "displayed message");
+
+      //first class function --> when function treated as value and pass as argument and able to return on call of function. with these ability a function a first class function
+
+      function firstClassFn(param1) {
+        console.log(param1);
+        return param1;
+      }
+
+      firstClassFn(function fnAsArgument() {});
+
+      //defined as seprate fn
+
+      function fnAsArgument2() {}
+      firstClassFn(fnAsArgument2);
+      //function are first class citizen
+
+      //Arrow fn
+      () => {};
+    </script>
+  </body>
+</html>

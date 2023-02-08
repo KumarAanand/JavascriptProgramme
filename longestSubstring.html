@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function lengthOfLongestSubstring(s) {
+        // let charset = [...new Set(s.split(""))].join("");
+        let charset = [];
+        let maxLength = 0;
+        let start = 0;
+        let end = 0;
+
+        while (start < s.length && end < s.length) {
+          if (!charset.has(s[end])) {
+            charset.add(s[end++]);
+            maxLength = Math.max(maxLength, end - start);
+          } else {
+            charset.delete(s[start++]);
+          }
+        }
+
+        console.log(charset);
+        return maxLength;
+      }
+
+      let inputString = "pwwkew";
+      let longestSubstringLength = lengthOfLongestSubstring(inputString);
+      console.log(longestSubstringLength); // Output: 3
+    </script>
+  </body>
+</html>

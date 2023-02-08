@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const user = {
+      //     firstName: "piyush!",
+      //     getName: () => {
+      //       const firstName = "Piyushi";
+      //       return this.firstName;
+      //     },
+      //   };
+      //   console.log(user.getName());
+
+      //   const user1 = {
+      //     name: "Mandakini",
+      //     greet() {
+      //       return `Hello , ${this.name}`;
+      //     },
+      //     farewell: () => {
+      //       return `GoodBye ,${this.name}`;
+      //     },
+      //   };
+      //   console.log(user1.greet()); // Hello Mandakini
+      //   console.log(user1.farewell()); //Hello
+
+      //   const calc = {
+      //     total: 0,
+      //     add(a) {
+      //       this.total += a;
+      //       return this;
+      //     },
+      //     multiply(a) {
+      //       this.total *= a;
+      //       return this;
+      //     },
+      //     subtract(a) {
+      //       this.total -= a;
+      //       return this;
+      //     },
+      //   };
+
+      //   const result = calc.add(10).multiply(5).subtract(30).add(10);
+      //   console.log(result);
+
+      var length = 4;
+      function callback() {
+        console.log(this.length);
+      }
+
+      const object = {
+        length: 5,
+        method() {
+          console.log(arguments);
+          arguments[0]();
+        },
+      };
+
+      object.method(callback, 2, 3);
+    </script>
+  </body>
+</html>

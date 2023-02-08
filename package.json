@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "fetch": "^1.1.0",
+    "xhr2": "^0.2.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "name": "javascript",
+  "version": "1.0.0",
+  "main": "callbackfn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KumarAanand/JavascriptProgramme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KumarAanand/JavascriptProgramme/issues"
+  },
+  "homepage": "https://github.com/KumarAanand/JavascriptProgramme#readme",
+  "description": ""
+}

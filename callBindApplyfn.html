@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Call bind apply method</h1>
+    <script>
+      //bind
+      var pokemon = {
+        firstName: "Pika",
+        lastName: "chu",
+        getPokeName: function () {
+          var fullName = this.firstName + " " + this.lastName;
+          return fullName;
+        },
+      };
+
+      var pokemonName = function (snack, hobby) {
+        console.log(this.getPokeName() + "I choose you");
+        console.log(this.getPokeName() + " love" + snack + "and" + hobby);
+      };
+
+      var logpokemon = pokemonName.bind(pokemon);
+
+      logpokemon("sushi", "algorithm");
+      pokemonName.call(pokemon, "sort", "search");
+
+      //compostion polyfill
+      function addFive(a) {
+        return a + 5;
+      }
+      function subtracttwo(a) {
+        return a - 2;
+      }
+
+      function multiplyfour(a) {
+        return a * 4;
+      }
+
+      const compose = (...functions) => {
+        return (args) => {
+          return functions.reduceRight((arg, fn) => fn(arg), args);
+        };
+      };
+      const evaluate = compose(addFive, subtracttwo, multiplyfour);
+      //componentmount
+      //componentdidmount
+      //comoponentupdate
+      //componentunmount \
+      //way to center to div
+      //css box model-->width,border,padding,Margin
+    </script>
+  </body>
+</html>
